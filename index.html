@@ -1,18 +1,47 @@
-<script src="http://static.opentok.com/webrtc/v2.2/js/opentok.min.js"></script>
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8">
 
-<script type="text/javascript">
-  var apiKey    = "12338862";
-  var sessionId = "2_MX4xMjMzODg2Mn5-TW9uIE1heSAxOSAyMjowMDozMyBQRFQgMjAxNH4wLjE2NTcxNTc1fn4";
-  var token     = "T1==cGFydG5lcl9pZD0xMjMzODg2MiZzaWc9OTM2YTViYjZlYmExYmZjYmEwOWZmY2FiOTFjMTUxNzJmM2E2ZGEyNTpzZXNzaW9uX2lkPTJfTVg0eE1qTXpPRGcyTW41LVRXOXVJRTFoZVNBeE9TQXlNam93TURvek15QlFSRlFnTWpBeE5INHdMakUyTlRjeE5UYzFmbjQmY3JlYXRlX3RpbWU9MTQwMDgwODI0MCZyb2xlPXB1Ymxpc2hlciZub25jZT0xNDAwODA4MjQwLjcwMzcyMDY3NDk2ODE4";
- 
-  var session = OT.initSession(apiKey, sessionId);
- 
-  session.on("streamCreated", function(event) {
-    session.subscribe(event.stream);
-  });
- 
-  session.connect(token, function(error) {
-    var publisher = OT.initPublisher();
-    session.publish(publisher);
-  });
-</script>
+    <title>Treeschat Cams</title>
+
+    <script src="https://swww.tokbox.com/v1.1.6/js/TB.min.js" type="text/javascript" charset="utf-8"></script>
+    <script src="https://code.jquery.com/jquery-2.0.3.min.js" type="text/javascript" charset="utf-8"></script>
+    <script src="http://vast-engineering.github.io/jquery-popup-overlay/jquery.popupoverlay.js"></script>
+    <script src="js/session.js" type="text/javascript" charset="utf-8"></script>
+    <script src="js/treeschat.js" type="text/javascript" charset="utf-8"></script>
+
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link href="//netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+</head>
+
+<body onLoad="connect();">
+
+    <div id='overlay'>
+        Your cam needs a name!<br>
+        <input type="text" id="camname"> 
+        <button onClick="submitName();">Ok!</button>
+    </div>
+
+    <div id="opentok_console"></div>
+
+    <div id="nav">
+        <ul id="navigation">
+            <li class="camup" id="publishLink"><a href="#" id="publishLink" onClick="javascript:startPublishing();" alt="Cam Up" title="Cam Up"><i class="fa fa-video-camera fa-lg"></i></a></li>
+            <li class="camdown" id="unpublishLink"><a href="#" id="unpublishLink" onClick="javascript:stopPublishing();" alt="Cam Down" title="Cam Down"><i class="fa fa-stop fa-lg"></i></a></li>
+            <li class="refresh"><a href="#" onClick="javascript:refreshCams();" alt="Refresh Cams" title="Refresh Cams"><i class="fa fa-refresh fa-lg"></i></a></li>
+            <li class="bigger"><a href="#" id="minusRow" onClick="javascript:minusRow();" alt="Bigger Cams" title="Bigger Cams"><i class="fa fa-plus-square fa-lg"></i></a></li>
+            <li class="smaller"><a href="#" id="addRow" onClick="javascript:addRow();" alt="Smaller Cams" title="Smaller Cams"><i class="fa fa-minus-square fa-lg"></i></a></li>
+        </ul>
+    </div>
+
+    <div id="cams">
+        <div id="subscribers">
+            <div id="myCamera"></div>
+        </div>
+    </div>
+
+</body>
+
+</html>
+
