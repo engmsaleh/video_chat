@@ -1,3 +1,9 @@
+@font-face {
+    font-family: 'Fira';
+    src: url('../font/FiraSans-Light.woff') format('woff'),
+         url('../font/FiraSans-Light.ttf') format('ttf');
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -83,4 +89,17 @@ object[id^='publisher_'] {
     border: 1px solid #666;
     color: #FFF;
     padding: 10px;
+    font-family: 'Fira';
+}
+
+#camname {
+    display: block;
+    width: 60%;
+    height: 40px;
+    font-size: 2em;
+}
+
+button.submit {
+    font-size: 1.5em;
+    padding: 5px;
 }

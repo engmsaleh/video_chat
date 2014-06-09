@@ -9,7 +9,7 @@
     <script src="https://code.jquery.com/jquery-2.0.3.min.js" type="text/javascript" charset="utf-8"></script>
     <script src="http://vast-engineering.github.io/jquery-popup-overlay/jquery.popupoverlay.js"></script>
     <script src="js/session.js" type="text/javascript" charset="utf-8"></script>
-    <script src="js/treeschat.js" type="text/javascript" charset="utf-8"></script>
+    <script src="js/chat.js" type="text/javascript" charset="utf-8"></script>
 
     <link rel="stylesheet" type="text/css" href="css/style.css">
     <link href="//netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
@@ -18,9 +18,10 @@
 <body onLoad="connect();">
 
     <div id='overlay'>
-        Your cam needs a name!<br>
-        <input type="text" id="camname"> 
-        <button onClick="submitName();">Ok!</button>
+        <h2>What is your username?</h2>
+        <h4>Your username will be displayed below your cam.</h4><br>
+        <input type="text" id="camname"><br>
+        <button class="submit" onClick="submitName();">Ok!</button>
     </div>
 
     <div id="opentok_console"></div>
