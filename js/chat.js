@@ -169,6 +169,9 @@ function addStream(stream) {
     
     container.appendChild(forceDisconnect);
 
+    $(".forceDisconnect").css('left', VIDEO_WIDTH-20);
+    $(".forceDisconnect").css('top', VIDEO_HEIGHT-20);
+
     // Create the div that will be replaced by the subscriber
     var div = document.createElement('div');
     var divId = stream.streamId;
