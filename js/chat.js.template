@@ -12,9 +12,9 @@ name = '';
 // OpenTok variables
 var publisher;
 var subscribers = [];
-var apiKey = "12338862";
-var sessionId = "2_MX4xMjMzODg2Mn5-TW9uIE1heSAxOSAyMjowMDozMyBQRFQgMjAxNH4wLjE2NTcxNTc1fn4";
-var token = 'T1==cGFydG5lcl9pZD0xMjMzODg2MiZzaWc9NTYxZGJlM2NlZDkxYTc1NDc0YTZhNTFkNzlkNmZmZjY5Y2FmODM3NzpzZXNzaW9uX2lkPTJfTVg0eE1qTXpPRGcyTW41LVRXOXVJRTFoZVNBeE9TQXlNam93TURvek15QlFSRlFnTWpBeE5INHdMakUyTlRjeE5UYzFmbjQmY3JlYXRlX3RpbWU9MTQwMjM0NDQ1NiZyb2xlPXB1Ymxpc2hlciZub25jZT0xNDAyMzQ0NDU2LjE0ODY2NjMyNDE5ODU=';  
+var apiKey = "YOUR_API_KEY";
+var sessionId = "YOUR_SESSIONID";
+var token = 'YOUR_TOKEN';  
 
 // Check if name is set
 // First a little jQuery to get URL parameters
